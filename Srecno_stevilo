@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+secret = int (5)
+
+guess = int (raw_input("Ugani šetvilo (med 1 in 100): "))
+
+if guess == secret:
+    print ("Uganil si število, srečno število je>>" + str (secret) + "<<Čestitke!!!")
+else:
+    print ("Žal nisi uganil števila... Število>>" + str (guess) + "<<ni srečno število. Več sreče prihodnjič!!!")
