@@ -1,10 +1,19 @@
 # -*- coding: utf-8 -*-
+import random
 
-secret = int (5)
+def main():
 
-guess = int (raw_input("Ugani šetvilo (med 1 in 100): "))
+    secret = random.randint(1, 30)
+    while True:
+        guess = int (raw_input("Ugani število (med 1 in 30): "))
+        if guess >= 1 and guess <= 30:
+            if guess == secret:
+             print ("Uganil si število, srečno število je>>" + str (secret) + "<<Čestitke!!!")
+            else:
+             print ("Žal nisi uganil števila... Število>>" + str (guess) + "<<ni srečno število. Več sreče prihodnjič!!!")
+        else:
+            print ("Nisi vnesel celega števila med 1 in 30!!!")
 
-if guess == secret:
-    print ("Uganil si število, srečno število je>>" + str (secret) + "<<Čestitke!!!")
-else:
-    print ("Žal nisi uganil števila... Število>>" + str (guess) + "<<ni srečno število. Več sreče prihodnjič!!!")
+if __name__ == '__main__':
+    main()
+
